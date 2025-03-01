@@ -1,0 +1,46 @@
+{
+  "name": "mcp-embedding-search",
+  "version": "0.0.0",
+  "description": "Search embedding databases",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-embedding-search": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "npx @modelcontextprotocol/inspector dist/index.js",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm run build && changeset publish"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "Scott Spence",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-embedding-exec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spences10/mcp-embedding-exec/issues"
+  },
+  "homepage": "https://github.com/spences10/mcp-embedding-exec#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.6.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "@types/node": "^22.13.8",
+    "typescript": "^5.8.2"
+  }
+}
