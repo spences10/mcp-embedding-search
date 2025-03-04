@@ -1,12 +1,9 @@
 # mcp-embedding-search
 
-A Model Context Protocol (MCP) server that queries a Turso database containing
-embeddings and transcript segments. This tool allows users to search for relevant 
-transcript segments by asking questions, without generating new embeddings.
-
-<a href="https://glama.ai/mcp/servers/mcp-embedding-search">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/mcp-embedding-search/badge" />
-</a>
+A Model Context Protocol (MCP) server that queries a Turso database
+containing embeddings and transcript segments. This tool allows users
+to search for relevant transcript segments by asking questions,
+without generating new embeddings.
 
 ## Features
 
@@ -29,16 +26,16 @@ Add this to your Cline MCP settings:
 
 ```json
 {
-  "mcpServers": {
-    "mcp-embedding-search": {
-      "command": "node",
-      "args": ["/path/to/mcp-embedding-search/dist/index.js"],
-      "env": {
-        "TURSO_URL": "your-turso-database-url",
-        "TURSO_AUTH_TOKEN": "your-turso-auth-token"
-      }
-    }
-  }
+	"mcpServers": {
+		"mcp-embedding-search": {
+			"command": "node",
+			"args": ["/path/to/mcp-embedding-search/dist/index.js"],
+			"env": {
+				"TURSO_URL": "your-turso-database-url",
+				"TURSO_AUTH_TOKEN": "your-turso-auth-token"
+			}
+		}
+	}
 }
 ```
 
@@ -48,16 +45,16 @@ Add this to your Claude Desktop configuration:
 
 ```json
 {
-  "mcpServers": {
-    "mcp-embedding-search": {
-      "command": "node",
-      "args": ["/path/to/mcp-embedding-search/dist/index.js"],
-      "env": {
-        "TURSO_URL": "your-turso-database-url",
-        "TURSO_AUTH_TOKEN": "your-turso-auth-token"
-      }
-    }
-  }
+	"mcpServers": {
+		"mcp-embedding-search": {
+			"command": "node",
+			"args": ["/path/to/mcp-embedding-search/dist/index.js"],
+			"env": {
+				"TURSO_URL": "your-turso-database-url",
+				"TURSO_AUTH_TOKEN": "your-turso-auth-token"
+			}
+		}
+	}
 }
 ```
 
@@ -72,21 +69,23 @@ Search for relevant transcript segments using vector similarity.
 Parameters:
 
 - `question` (string, required): The query text to search for
-- `limit` (number, optional): Number of results to return (default: 5, max: 50)
-- `min_score` (number, optional): Minimum similarity threshold (default: 0.5, range: 0-1)
+- `limit` (number, optional): Number of results to return (default: 5,
+  max: 50)
+- `min_score` (number, optional): Minimum similarity threshold
+  (default: 0.5, range: 0-1)
 
 Response format:
 
 ```json
 [
-  {
-    "episode_title": "Episode Title",
-    "segment_text": "Transcript segment content...",
-    "start_time": 123.45,
-    "end_time": 167.89,
-    "similarity": 0.85
-  },
-  // Additional results...
+	{
+		"episode_title": "Episode Title",
+		"segment_text": "Transcript segment content...",
+		"start_time": 123.45,
+		"end_time": 167.89,
+		"similarity": 0.85
+	}
+	// Additional results...
 ]
 ```
 
@@ -111,7 +110,8 @@ CREATE TABLE transcripts (
 );
 ```
 
-The `embedding` column should contain vector embeddings that can be used with the `vector_distance_cos` function.
+The `embedding` column should contain vector embeddings that can be
+used with the `vector_distance_cos` function.
 
 ## Development
 
@@ -168,5 +168,7 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- Built on the [Model Context Protocol](https://github.com/modelcontextprotocol)
-- Designed for efficient vector similarity search in transcript databases
+- Built on the
+  [Model Context Protocol](https://github.com/modelcontextprotocol)
+- Designed for efficient vector similarity search in transcript
+  databases
