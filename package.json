@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spences10/mcp-embedding-exec.git"
+    "url": "https://github.com/spences10/mcp-embedding-search.git"
   },
   "bugs": {
-    "url": "https://github.com/spences10/mcp-embedding-exec/issues"
+    "url": "https://github.com/spences10/mcp-embedding-search/issues"
   },
-  "homepage": "https://github.com/spences10/mcp-embedding-exec#readme",
+  "homepage": "https://github.com/spences10/mcp-embedding-search#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.6.1",
     "@libsql/client": "^0.5.6"
