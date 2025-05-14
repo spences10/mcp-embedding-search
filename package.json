@@ -36,12 +36,12 @@
   },
   "homepage": "https://github.com/spences10/mcp-embedding-search#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.6.1",
-    "@libsql/client": "^0.5.6"
+    "@modelcontextprotocol/sdk": "1.11.2",
+    "@libsql/client": "^0.15.5"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.28.1",
-    "@types/node": "^22.13.8",
-    "typescript": "^5.8.2"
+    "@changesets/cli": "^2.29.4",
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3"
   }
 }
